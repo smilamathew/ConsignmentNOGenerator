@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <title>Consignment Note Number Generator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Consignment Note Number Generator</h1>
+	<div>
+    <form action="#" th:action="@{/connotenumber}" th:object="${connotenumber}" method="post">
+    <label>CarrierName</label> 
+    	<input type="text" th:field="*{carrierName}" />
+    <label>Account Number</label> 
+       <input type="text" th:field="*{accountNumber}" />
+    <label>Digits:</label> 
+     	<input type="text" placeholder ="Enter digits" th:field="*{digits}" /> 
+     <label> Last Used Index:</label> 
+         <input type="text" th:field="*{lastUsedIndex}" />
+     <label> Range Start</label>
+      	<input type="text" th:field="*{rangeStart}" />
+     <label> Range End</label> 
+      	<input type="text" th:field="*{rangeEnd}" />
+      <input type="submit" value="Submit" /> 
+    </form>
+ </div>
+   
+</body>
+</html>
